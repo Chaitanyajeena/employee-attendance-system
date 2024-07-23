@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Manager View</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Manager View</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Date</th>
+                    <th>Arrival Time</th>
+                    <th>Leave Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% employees.forEach(employee => { %>
+                    <tr>
+                        <td><%= employee.empId %></td>
+                        <td><%= employee.date %></td>
+                        <td><%= employee.arrivalTime %></td>
+                        <td><%= employee.leaveTime %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <form action="/" method="GET">
+            <button type="submit">Back</button>
+        </form>
+    </div>
+</body>
+</html>

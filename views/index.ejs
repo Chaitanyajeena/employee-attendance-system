@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Employee Attendance</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Attendance System</h1>
+        <% if (message) { %>
+            <div class="message"><%= message %></div>
+        <% } %>
+        <form action="/arrival" method="POST">
+            <input type="text" name="empId" placeholder="Employee ID" required>
+            <button type="submit">Arrival Time</button>
+        </form>
+        <form action="/leave" method="POST">
+            <input type="text" name="empId" placeholder="Employee ID" required>
+            <button type="submit">Leave Time</button>
+        </form>
+        <form action="/manager" method="GET">
+            <button type="submit">Manager View</button>
+        </form>
+    </div>
+</body>
+</html>
